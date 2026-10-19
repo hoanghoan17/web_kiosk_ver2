@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FastPOS · Admin System</title>
+    <link rel="stylesheet" href="/Admin/styles.css" />
+    <script src="/Admin/js/icons.js" defer></script>
+    <script src="/Admin/js/dashboard.js" defer></script>
+    <script src="/Admin/js/system.js" defer></script>
+    <script src="/Admin/app.js" defer></script>
+  </head>
+  <body th:attr="data-page=${initialPage}">
+    <aside th:replace="~{admin/fragments/sidebar :: sidebar}"></aside>
+    <div class="workspace">
+      <header>
+        <div class="header-left">
+          <h1 id="title">Dashboard Tổng Quan</h1>
+          <span id="connection" class="connection">Đang kết nối</span>
+        </div>
+        <div class="header-actions">
+          <time id="clock"></time
+          ><span class="header-user">Quản trị cửa hàng</span
+          ><span class="header-avatar">AD</span
+          ><button id="logout-header" class="secondary small mobile-logout">
+            Đăng xuất
+          </button>
+        </div>
+      </header>
+      <div id="demo-banner" class="demo-banner" hidden>
+        CHẾ ĐỘ DEMO · Dữ liệu minh họa, chưa kết nối SQL Server.
+      </div>
+      <div id="maintenance-banner" class="maintenance-banner" hidden></div>
+      <main id="content" aria-live="polite"></main>
+      <footer>FastPOS Admin · Giờ Việt Nam</footer>
+    </div>
+    <dialog id="modal">
+      <div class="modal-head">
+        <h2 id="modal-title"></h2>
+        <button id="close-modal" class="icon-button" aria-label="Đóng">
+          ✕
+        </button>
+      </div>
+      <div id="modal-body"></div>
+    </dialog>
+    <div id="toast" role="status" hidden></div>
+  </body>
+</html>

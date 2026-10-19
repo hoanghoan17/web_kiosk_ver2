@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Đăng nhập · FastPOS</title>
+    <link rel="stylesheet" href="/Admin/styles.csses.css" />
+    <script src="/Admin/login.jsgin.js" defer></script>
+  </head>
+  <body class="login-page">
+    <section class="login-intro">
+      <span class="login-logo">FastPOS</span>
+      <p class="eyebrow">ĐIỀU HÀNH CỬA HÀNG</p>
+      <h1>Mỗi đơn hàng.<br />Một trải nghiệm tốt.</h1>
+      <p>
+        Quản lý thực đơn, theo dõi bếp và nắm tình hình kinh doanh tại một nơi.
+      </p>
+      <div class="login-graphic">
+        <span>01</span>
+        <div>ĐẶT MÓN → THANH TOÁN → CHẾ BIẾN → GIAO MÓN</div>
+      </div>
+    </section>
+    <section class="login-card">
+      <span class="eyebrow">CHÀO MỪNG TRỞ LẠI</span>
+      <h2>Đăng nhập quản trị</h2>
+      <p class="muted">Sử dụng tài khoản có quyền Admin.</p>
+      <form id="login-form">
+        <label
+          >Tên đăng nhập<input
+            name="username"
+            autocomplete="username"
+            required
+            maxlength="100" /></label
+        ><label
+          >Mật khẩu<input
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            required
+            maxlength="72"
+        /></label>
+        <p id="error" class="form-error" role="alert"></p>
+        <button class="primary" type="submit">Đăng nhập →</button>
+      </form>
+      <small>Phiên làm việc kết thúc sau 30 phút không hoạt động.</small>
+    </section>
+  </body>
+</html>
